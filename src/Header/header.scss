@@ -1,0 +1,53 @@
+.header {
+    background-color: seagreen;
+    max-height: 100px;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    &-navigation {
+        display: inline;
+
+        &-content {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+
+            &__logo {
+                float: left;
+            }
+
+            &-list {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                height: 100px;
+                max-height: inherit;
+                overflow: hidden;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;    
+                align-items: center;
+                margin-right: 30px;
+
+                &__item {
+                    font-size: 16pt;
+                    margin: 0 20px;
+                    padding: 35px;
+                    background-color: greenyellow;
+
+                    &:hover {
+                        background-color: green;
+                    }
+
+                    &:active {
+                        background-color: green;
+                    }
+                }
+            }
+        }
+    }
+}
