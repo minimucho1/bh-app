@@ -9,15 +9,9 @@ class Polls extends Component {
       dropdownValue: 'Choose One...',
       selectedValues: {}
     }
-
-    this.createOptions = this.createOptions.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.renderOptions = this.renderOptions.bind(this);
-    this.renderContainer = this.renderContainer.bind(this);
-    this.handleInputChange = this.handleInputChange.bind(this);
   }
 
-  createOptions(options) {
+  createOptions = options => {
     let optionsMarkup = [];
     options.forEach((opt, index) => {
       optionsMarkup.push(<option key={index} value={opt}>{opt}</option>)
@@ -25,14 +19,14 @@ class Polls extends Component {
     return optionsMarkup;
   }
 
-  handleChange(event) {
-    this.setState({ dropdownValue: event.target.value });
+  handleChange = (e) => {
+    this.setState({ dropdownValue: e.target.value });
   }
 
-  handleInputChange(event) {
+  handleInputChange = (e) => {
     const newValues = {
       ...this.state.selectedValues,
-      [event.target.name]: event.target.checked
+      [e.target.name]: e.target.checked
     };
     this.setState({ selectedValues: newValues })
   }
@@ -42,7 +36,7 @@ class Polls extends Component {
     console.log('TODO: Submit data to back-end');
   }
 
-  renderOptions() {
+  renderOptions = () => {
     const { options = ['Choose One...', 'Anime of the Season', 'Best Soundtrack'] } = this.props;
 
     return (options.length > 0 &&
@@ -52,7 +46,7 @@ class Polls extends Component {
     );
   }
 
-  renderContainer() {
+  renderContainer = () => {
     return <PollsContent handleInputChange={this.handleInputChange} dropdownState={this.state.dropdownValue} />;
   }
 

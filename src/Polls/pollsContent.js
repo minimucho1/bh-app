@@ -3,14 +3,7 @@ import PollsOption from './pollsOption';
 import { animesMockData, animesMockData2 } from './pollsMockdata';
 
 class PollsContent extends Component {
-  constructor() {
-    super();
-
-    this.getMockData = this.getMockData.bind(this);
-    this.showAnimesOrMock = this.showAnimesOrMock.bind(this);
-  }
-
-  getMockData() {
+  getMockData = () => {
     let data = [];
 
     const { dropdownState = 'Choose One...' } = this.props;
@@ -22,7 +15,7 @@ class PollsContent extends Component {
     return data;
   }
 
-  showAnimesOrMock() {
+  showAnimesOrMock = () => {
     const { animes = [] } = this.props;
     const data = (animes.length > 0 && animes) || this.getMockData();
 
