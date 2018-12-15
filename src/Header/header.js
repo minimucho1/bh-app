@@ -5,16 +5,16 @@ class Header extends Component {
     render() {
         return (
             <header className="header">
-                <nav className="header-navigation">
-                    <div className="header-navigation-content">
-                        <a className="header-navigation-content__logo" href="/"><img src={'images/anipoll-icon-small.jpg'} alt="logo" /></a>
-                        <ul className="header-navigation-content-list">
-                            <li className="header-navigation-content-list__item"><a href="/">Home</a></li>
-                            <li className="header-navigation-content-list__item"><a href="/Polls/polls.html">Polls</a></li>
-                            <li className="header-navigation-content-list__item"><a href="/Results/results.html">Results</a></li>
-                        </ul>
-                    </div>
-                </nav>
+                <div className="header-container">
+                        <a className="header-container__logo" href="/"><img src={'images/anination-icon-70.png'} alt="logo" /></a>
+                        <nav className="header-container__nav">
+                            <div className="header-container__nav-container">
+                                    <button className="header-container__nav-container__item"><a href="/">Home</a></button>
+                                    <button className="header-container__nav-container__item"><a href="/Polls/polls.html">Polls</a></button>
+                                    <button className="header-container__nav-container__item"><a href="/Results/results.html">Results</a></button>
+                            </div>
+                        </nav>
+                </div>
             </header>
         );
     }
