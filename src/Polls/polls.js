@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+import PollsDropdown from './pollsDropdown';
 import PollsContent from './pollsContent';
 import './polls.scss';
 
@@ -9,14 +11,6 @@ class Polls extends Component {
       dropdownValue: 'Choose One...',
       selectedValues: {}
     }
-  }
-
-  createOptions = options => {
-    let optionsMarkup = [];
-    options.forEach((opt, index) => {
-      optionsMarkup.push(<option key={index} value={opt}>{opt}</option>)
-    });
-    return optionsMarkup;
   }
 
   handleChange = (e) => {
@@ -36,28 +30,17 @@ class Polls extends Component {
     console.log('TODO: Submit data to back-end');
   }
 
-  renderOptions = () => {
-    const { options = ['Choose One...', 'Anime of the Season', 'Best Soundtrack'] } = this.props;
-
-    return (options.length > 0 &&
-      <select className="polls-dropdown" value={this.state.dropdownValue} onChange={this.handleChange}>
-        {this.createOptions(options)}
-      </select>
-    );
-  }
-
-  renderContainer = () => {
-    return <PollsContent handleInputChange={this.handleInputChange} dropdownState={this.state.dropdownValue} />;
-  }
-
   render() {
+    const { dropdownValue } = this.state;
+    const { options } = this.props;
+
     return (
       <>
-        {this.renderOptions()}
-        {this.state.dropdownValue !== 'Choose One...' &&
+        <PollsDropdown options={options} dropdownValue={dropdownValue} handleChange={this.handleChange} />
+        {dropdownValue !== 'Choose One...' &&
           <>
             <div className="polls-container">
-              {this.renderContainer()}
+              <PollsContent handleInputChange={this.handleInputChange} dropdownState={this.state.dropdownValue} />;
             </div>
             <button className="polls-submit" onClick={this.handleSubmit}>Submit</button>
           </>
