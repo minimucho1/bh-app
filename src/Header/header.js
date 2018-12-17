@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+import { NavLink } from 'react-router-dom';
 import './header.scss';
 
 class Header extends Component {
@@ -9,9 +11,9 @@ class Header extends Component {
                         <a className="header-container__logo" href="/"><img src={'images/anination-icon-70.png'} alt="logo" /></a>
                         <nav className="header-container__nav">
                             <div className="header-container__nav-container">
-                                    <button className="header-container__nav-container__item"><a href="/">Home</a></button>
-                                    <button className="header-container__nav-container__item"><a href="/polls">Polls</a></button>
-                                    <button className="header-container__nav-container__item"><a href="/polls">Results</a></button>
+                                <NavLink className="header-container__nav-container__item" exact to="/" activeClassName="selected">Home</NavLink>
+                                <NavLink className="header-container__nav-container__item" to="/polls" activeClassName="selected">Polls</NavLink>
+                                <NavLink className="header-container__nav-container__item" to="/results" activeClassName="selected">Results</NavLink>
                             </div>
                         </nav>
                 </div>

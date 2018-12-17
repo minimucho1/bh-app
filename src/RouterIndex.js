@@ -9,6 +9,7 @@ function RouterIndex() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/polls" component={App} />
+        <Route path="/results" component={App} />
         <Route component={NoMatch} />
       </Switch>
     </Router>

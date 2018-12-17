@@ -44,15 +44,17 @@
                     padding: 0;
                     background-color: black;
                     text-transform: uppercase;
-                    display: inline-block;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     font-size: 18px;
 
                     &:hover {
-                        background-color: navy;
+                        background-color: #151B54;
                     }
 
-                    &:active {
-                        background-color: blue;
+                    &.selected {
+                        background-color: #2B3856;
                     }
                 }
             }
