@@ -10,8 +10,8 @@ class Header extends Component {
                         <nav className="header-container__nav">
                             <div className="header-container__nav-container">
                                     <button className="header-container__nav-container__item"><a href="/">Home</a></button>
-                                    <button className="header-container__nav-container__item"><a href="/Polls/polls.html">Polls</a></button>
-                                    <button className="header-container__nav-container__item"><a href="/Results/results.html">Results</a></button>
+                                    <button className="header-container__nav-container__item"><a href="/Polls">Polls</a></button>
+                                    <button className="header-container__nav-container__item"><a href="/Polls">Results</a></button>
                             </div>
                         </nav>
                 </div>
