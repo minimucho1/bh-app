@@ -1,3 +1,18 @@
+## bh-app
+
+A project by J.R. Ladera, Jenny Nguyen, and Rex Pham for Oregon State University Beaverhacks 2018.
+
+The goal was to create a web application to learn HTML, CSS, JavaScript, NodeJS, React, Express and MongoDB.
+
+In the span of three days, Rex, who had zero experience with any coding, created the front page and the 404 page. Jenny's goal was to create a back-end express application. She had prior experience with Node or Express. The front-end created by J.R. would request data to be rendered on the front facing application.
+
+The front facing application is deployed and located at [http://www.anination.info](http://www.anination.info).
+The back-end service has not been deployed. [bh-service](https://github.com/minimucho1/bh-service).
+
+This is an ongoing project.
+
+*****
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
