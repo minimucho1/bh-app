@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import { defaultDropdownValue } from './pollsConstants';
 import './pollsDropdown.scss';
 
 class PollsDropdown extends Component {
@@ -21,7 +22,7 @@ class PollsDropdown extends Component {
 }
 
 PollsDropdown.defaultProps = {
-  options: ['Choose One...', 'Anime of the Season', 'Best Soundtrack'],
+  options: [defaultDropdownValue, 'Anime of the Season', 'Best Soundtrack'],
   dropdownValue: '',
   handleChange: () => {}
 };

@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
+
 import PollsOption from './pollsOption';
 import { animesMockData, animesMockData2 } from './pollsMockdata';
+import { defaultDropdownValue } from './pollsConstants';
 
 class PollsContent extends Component {
   getMockData = () => {
     let data = [];
 
-    const { dropdownState = 'Choose One...' } = this.props;
+    const { dropdownState = defaultDropdownValue } = this.props;
     if (dropdownState === 'Anime of the Season') {
       return animesMockData;
     } else if (dropdownState === 'Best Soundtrack') {

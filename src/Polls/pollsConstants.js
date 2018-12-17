@@ -1,0 +1,1 @@
+export const defaultDropdownValue = 'Select a Category...';

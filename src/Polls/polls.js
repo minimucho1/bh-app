@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 
 import PollsDropdown from './pollsDropdown';
 import PollsContent from './pollsContent';
+import { defaultDropdownValue } from './pollsConstants';
 import './polls.scss';
 
 class Polls extends Component {
   constructor() {
     super();
     this.state = {
-      dropdownValue: 'Choose One...',
+      dropdownValue: defaultDropdownValue,
       selectedValues: {}
     }
   }
@@ -37,7 +38,7 @@ class Polls extends Component {
     return (
       <>
         <PollsDropdown options={options} dropdownValue={dropdownValue} handleChange={this.handleChange} />
-        {dropdownValue !== 'Choose One...' &&
+        {dropdownValue !== defaultDropdownValue &&
           <>
             <div className="polls-container">
               <PollsContent handleInputChange={this.handleInputChange} dropdownState={this.state.dropdownValue} />;
